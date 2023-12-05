@@ -21,4 +21,7 @@ if __name__ == "__main__":
         print("Такого балла нет", file=sys.stderr)
         exit(1)
     
-    print("Команда с данным баллом заняла", scores.index(n)+1, "место")
+    position = (i for i in range(1, 21))
+    result = dict(zip(scores, position))
+
+    print("Команда с данным баллом заняла", result[n], "место")
