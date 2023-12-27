@@ -6,7 +6,7 @@ import sys
 
 if __name__ == "__main__":
 
-    scores = tuple(map(int, input("Введите баллы 20 команд в поорядке убывания: ").split()))
+    scores = tuple(int(i) for i in input("Введите баллы 20 команд в поорядке убывания: ").split())
     if len(scores) < 20:
         print("Количество команд меньше 20", file=sys.stderr)
         exit(1)        
